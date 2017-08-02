@@ -9,4 +9,13 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+# Validate Store and Employee classes
+begin
+  @store_name = gets.chomp
+  @user_store = Store.create(name: @store_name)
+  @user_store.save!
+rescue
+  puts "IS YOUR STORE VALID? #{@user_store.valid?}"
+  puts "YOUR ERRORS ARE:"
+  @user_store.errors.messages.each {|e| puts e}
+end

@@ -10,5 +10,4 @@ puts "----------"
 
 # Update the first store with a new name
 @store1.name = "Yelim's store"
-p @store1.name
-
+puts @store1.name
