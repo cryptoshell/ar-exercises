@@ -16,5 +16,6 @@ puts @sum_revenue
 puts @avg_revenue
 
 # Output num of stores that are generating $1M or more in annual sales
+# Either size or count
 @num_of_rich_stores = Store.where("annual_revenue > ?", 1000000).size
 puts @num_of_rich_stores
