@@ -5,4 +5,9 @@ require_relative './exercise_2'
 puts "Exercise 3"
 puts "----------"
 
-# Your code goes here ...
+# Assign store 3 to instance variable
+@store3 = Store.find_by(id: 3)
+
+# Destroy store 3 from db
+@store3.destroy
+puts Store.count
